@@ -18,7 +18,10 @@ COPY ./requirements.txt /home/bishal/docker_project
 
 RUN pip install -r requirements.txt
 
-
+COPY ./entrypoint.sh /home/bishal/docker_project/entrypoint.sh
 
 COPY . /home/bishal/docker_project
+
+
+ENTRYPOINT ["/home/bishal/docker_project/entrypoint.sh"]
 
